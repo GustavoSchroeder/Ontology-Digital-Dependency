@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl"
+     xml:base="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/base-mental-health.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl">
+     ontologyIRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/base-mental-health.owl">
     <Prefix name="" IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -14,247 +14,178 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>This ontology describe the unhealthy use of electronic devices and their relationship to mental health problems and diseases, using context historic to identify this diseases.</Literal>
+        <Literal>This base ontology describe the detection of mental health problemas by context awereness.</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#Activity"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Activity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Addiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Context"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#BloodPressure"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DailyContext"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Context"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DateTime"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DailyContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#HeartRate"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DateTime"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Location"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DeviceContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#MentalDisorder"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FearOfMissingOut"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Oximetry"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Geolocation"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#PhysiologicalContext"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HeartRate"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Place"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#InternetAddiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Sleeping"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MentalDisorder"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#User"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Nomophonia"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Action"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Phubbing"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Anxiety"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PhysiologicalContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#HeartRateVariability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Place"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Person"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Profile"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Steps"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ScreenUse"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Stress"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SleepPattern"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#driving"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SmartphoneAddiction"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#in_car"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SocialMediaAddiction"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#my_home"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#User"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#my_work"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#VideoGameAddiction"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#restaurant"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#computer_action"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#still"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#driving"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#in_car"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#my_home"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#my_work"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#restaurant"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#smartphone_action"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#smartphone_open_apps"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#still"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#video_game_uptime"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#walking"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#walking"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#Activity"/>
-        <Class IRI="#DailyContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Activity"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DailyContext"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#BloodPressure"/>
-        <Class IRI="#PhysiologicalContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DailyContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Context"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DailyContext"/>
-        <Class IRI="#Context"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DateTime"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DailyContext"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DateTime"/>
-        <Class IRI="#DailyContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#HeartRate"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#PhysiologicalContext"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DeviceContext"/>
-        <Class IRI="#Context"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Location"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DailyContext"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FearOfMissingOut"/>
-        <Class IRI="#SmartphoneAddiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Oximetry"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#PhysiologicalContext"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Geolocation"/>
-        <Class IRI="#DailyContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#PhysiologicalContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Context"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HeartRate"/>
-        <Class IRI="#PhysiologicalContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Sleeping"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#PhysiologicalContext"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InternetAddiction"/>
-        <Class IRI="#Addiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Anxiety"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#MentalDisorder"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Nomophonia"/>
-        <Class IRI="#SmartphoneAddiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#HeartRateVariability"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#PhysiologicalContext"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Phubbing"/>
-        <Class IRI="#SmartphoneAddiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Steps"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DailyContext"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PhysiologicalContext"/>
-        <Class IRI="#Context"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ScreenUse"/>
-        <Class IRI="#DeviceContext"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SleepPattern"/>
-        <Class IRI="#PhysiologicalContext"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SmartphoneAddiction"/>
-        <Class IRI="#Addiction"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SocialMediaAddiction"/>
-        <Class IRI="#Addiction"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#VideoGameAddiction"/>
-        <Class IRI="#Addiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Stress"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#MentalDisorder"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#Activity"/>
-        <Class IRI="#DateTime"/>
-        <Class IRI="#Geolocation"/>
-        <Class IRI="#ScreenUse"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Activity"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DateTime"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Location"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Steps"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#BloodPressure"/>
-        <Class IRI="#HeartRate"/>
-        <Class IRI="#SleepPattern"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#DailyContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#PhysiologicalContext"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#DailyContext"/>
-        <Class IRI="#PhysiologicalContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#HeartRate"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Oximetry"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Sleeping"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#HeartRateVariability"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#FearOfMissingOut"/>
-        <Class IRI="#Nomophonia"/>
-        <Class IRI="#Phubbing"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#InternetAddiction"/>
-        <Class IRI="#SmartphoneAddiction"/>
-        <Class IRI="#SocialMediaAddiction"/>
-        <Class IRI="#VideoGameAddiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Anxiety"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/mental-health-base.owl#Stress"/>
     </DisjointClasses>
     <ClassAssertion>
-        <Class IRI="#ScreenUse"/>
-        <NamedIndividual IRI="#computer_action"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Activity"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#driving"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Activity"/>
-        <NamedIndividual IRI="#driving"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Activity"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#in_car"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Activity"/>
-        <NamedIndividual IRI="#in_car"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Place"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#my_home"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Place"/>
-        <NamedIndividual IRI="#my_home"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Place"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#my_work"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Place"/>
-        <NamedIndividual IRI="#my_work"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Place"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#restaurant"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Place"/>
-        <NamedIndividual IRI="#restaurant"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Activity"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#still"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ScreenUse"/>
-        <NamedIndividual IRI="#smartphone_action"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ScreenUse"/>
-        <NamedIndividual IRI="#smartphone_open_apps"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Activity"/>
-        <NamedIndividual IRI="#still"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ScreenUse"/>
-        <NamedIndividual IRI="#video_game_uptime"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Activity"/>
-        <NamedIndividual IRI="#walking"/>
+        <Class IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#Activity"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl#walking"/>
     </ClassAssertion>
 </Ontology>
 
