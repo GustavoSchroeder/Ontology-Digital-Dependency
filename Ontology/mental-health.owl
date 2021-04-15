@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl">
+    <Prefix name="" IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/2/digital-dependency.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology describe the unhealthy use of electronic devices and their relationship to mental health problems and diseases, using context historic to identify this diseases.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Addiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BloodPressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DailyContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DateTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeviceContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FearOfMissingOut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Geolocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeartRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternetAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MentalDisorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nomophonia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phubbing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysiologicalContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Profile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScreenUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SleepPattern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartphoneAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialMediaAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VideoGameAddiction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#computer_action"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#driving"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#in_car"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#my_home"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#my_work"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#restaurant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#smartphone_action"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#smartphone_open_apps"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#still"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#video_game_uptime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#walking"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Activity"/>
+        <Class IRI="#DailyContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BloodPressure"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DailyContext"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DateTime"/>
+        <Class IRI="#DailyContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeviceContext"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FearOfMissingOut"/>
+        <Class IRI="#SmartphoneAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Geolocation"/>
+        <Class IRI="#DailyContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeartRate"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternetAddiction"/>
+        <Class IRI="#Addiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nomophonia"/>
+        <Class IRI="#SmartphoneAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phubbing"/>
+        <Class IRI="#SmartphoneAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysiologicalContext"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScreenUse"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SleepPattern"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneAddiction"/>
+        <Class IRI="#Addiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialMediaAddiction"/>
+        <Class IRI="#Addiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoGameAddiction"/>
+        <Class IRI="#Addiction"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Activity"/>
+        <Class IRI="#DateTime"/>
+        <Class IRI="#Geolocation"/>
+        <Class IRI="#ScreenUse"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BloodPressure"/>
+        <Class IRI="#HeartRate"/>
+        <Class IRI="#SleepPattern"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DailyContext"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FearOfMissingOut"/>
+        <Class IRI="#Nomophonia"/>
+        <Class IRI="#Phubbing"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#InternetAddiction"/>
+        <Class IRI="#SmartphoneAddiction"/>
+        <Class IRI="#SocialMediaAddiction"/>
+        <Class IRI="#VideoGameAddiction"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#ScreenUse"/>
+        <NamedIndividual IRI="#computer_action"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activity"/>
+        <NamedIndividual IRI="#driving"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activity"/>
+        <NamedIndividual IRI="#in_car"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#my_home"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#my_work"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#restaurant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScreenUse"/>
+        <NamedIndividual IRI="#smartphone_action"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScreenUse"/>
+        <NamedIndividual IRI="#smartphone_open_apps"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activity"/>
+        <NamedIndividual IRI="#still"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScreenUse"/>
+        <NamedIndividual IRI="#video_game_uptime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activity"/>
+        <NamedIndividual IRI="#walking"/>
+    </ClassAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
