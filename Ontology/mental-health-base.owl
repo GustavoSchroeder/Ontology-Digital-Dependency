@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This base ontology describe the detection of mental health problemas by context awereness.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DailyContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DateTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeartRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeartRateVariability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MentalDisorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oximetry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysiologicalContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sleeping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Steps"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#driving"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#in_car"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#my_home"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#my_university"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#my_work"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#still"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#walking"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Activity"/>
+        <Class IRI="#DailyContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DailyContext"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DateTime"/>
+        <Class IRI="#DailyContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeartRate"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeartRateVariability"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <Class IRI="#DailyContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oximetry"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysiologicalContext"/>
+        <Class IRI="#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sleeping"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Steps"/>
+        <Class IRI="#DailyContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stress"/>
+        <Class IRI="#MentalDisorder"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Action"/>
+        <Class IRI="#Context"/>
+        <Class IRI="#MentalDisorder"/>
+        <Class IRI="#Person"/>
+        <Class IRI="#Place"/>
+        <Class IRI="#User"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Activity"/>
+        <Class IRI="#DateTime"/>
+        <Class IRI="#Location"/>
+        <Class IRI="#Steps"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="#Stress"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DailyContext"/>
+        <Class IRI="#PhysiologicalContext"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HeartRate"/>
+        <Class IRI="#HeartRateVariability"/>
+        <Class IRI="#Oximetry"/>
+        <Class IRI="#Sleeping"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Activity"/>
+        <NamedIndividual IRI="#driving"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activity"/>
+        <NamedIndividual IRI="#in_car"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#my_home"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#my_university"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#my_work"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activity"/>
+        <NamedIndividual IRI="#still"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activity"/>
+        <NamedIndividual IRI="#walking"/>
+    </ClassAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
