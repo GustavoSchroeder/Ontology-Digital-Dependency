@@ -77,6 +77,9 @@
         <ObjectProperty IRI="#hasDataCollected"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDataFor"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasEffects"/>
     </Declaration>
     <Declaration>
@@ -92,7 +95,43 @@
         <ObjectProperty IRI="#isCreatedBy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isDependentOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isReferencedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCurrentHR"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDateTimeValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasQuantitySteps"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSeverity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSleepQualityPoints"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUserId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValueOximetry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVariabilityHR"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#latitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#longitude"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#driving"/>
@@ -264,6 +303,10 @@
         <ObjectProperty IRI="#isCollectingData"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDataFor"/>
+        <ObjectProperty IRI="#isDependentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasEffects"/>
         <ObjectProperty IRI="#isAffecting"/>
     </InverseObjectProperties>
@@ -281,6 +324,9 @@
         <ObjectProperty IRI="#hasDataCollected"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasDataFor"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
         <ObjectProperty IRI="#hasEffects"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
@@ -289,6 +335,9 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#isCollectingData"/>
     </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isDependentOf"/>
+    </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCreated"/>
         <Class IRI="#User"/>
@@ -296,6 +345,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDataCollected"/>
         <Class IRI="#Context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDataFor"/>
+        <Class IRI="#HeartRateVariability"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEffects"/>
@@ -318,6 +371,10 @@
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDependentOf"/>
+        <Class IRI="#HeartRate"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isReferencedBy"/>
         <Class IRI="#Place"/>
     </ObjectPropertyDomain>
@@ -328,6 +385,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDataCollected"/>
         <Class IRI="#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDataFor"/>
+        <Class IRI="#HeartRate"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEffects"/>
@@ -350,9 +411,101 @@
         <Class IRI="#User"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDependentOf"/>
+        <Class IRI="#HeartRateVariability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isReferencedBy"/>
         <Class IRI="#Location"/>
     </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCurrentHR"/>
+        <Class IRI="#HeartRate"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDateTimeValue"/>
+        <Class IRI="#DateTime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasQuantitySteps"/>
+        <Class IRI="#Steps"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSeverity"/>
+        <Class IRI="#MentalDisorder"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSleepQualityPoints"/>
+        <Class IRI="#Sleeping"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasUserId"/>
+        <Class IRI="#User"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValueOximetry"/>
+        <Class IRI="#Oximetry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVariabilityHR"/>
+        <Class IRI="#HeartRateVariability"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#latitude"/>
+        <Class IRI="#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#longitude"/>
+        <Class IRI="#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCurrentHR"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDateTimeValue"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:Name"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasQuantitySteps"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSeverity"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSleepQualityPoints"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasUserId"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasValueOximetry"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVariabilityHR"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#latitude"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#longitude"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
 </Ontology>
 
 
