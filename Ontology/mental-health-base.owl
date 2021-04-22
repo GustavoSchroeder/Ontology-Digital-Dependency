@@ -107,6 +107,12 @@
         <DataProperty IRI="#hasDateTimeValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasLatitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLongitude"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasName"/>
     </Declaration>
     <Declaration>
@@ -119,6 +125,9 @@
         <DataProperty IRI="#hasSleepQualityPoints"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasSleepingHours"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasUserId"/>
     </Declaration>
     <Declaration>
@@ -126,12 +135,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasVariabilityHR"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#latitude"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#longitude"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#driving"/>
@@ -315,11 +318,14 @@
         <ObjectProperty IRI="#isReferencedBy"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasMetadata"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#isReferencedBy"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
         <ObjectProperty IRI="#hasCreated"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#isCreatedBy"/>
-    </FunctionalObjectProperty>
+    </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#hasDataCollected"/>
     </TransitiveObjectProperty>
@@ -334,6 +340,9 @@
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#isCollectingData"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isCreatedBy"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#isDependentOf"/>
@@ -427,6 +436,14 @@
         <Class IRI="#DateTime"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasLatitude"/>
+        <Class IRI="#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLongitude"/>
+        <Class IRI="#Location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasName"/>
         <Class IRI="#Person"/>
     </DataPropertyDomain>
@@ -443,6 +460,10 @@
         <Class IRI="#Sleeping"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasSleepingHours"/>
+        <Class IRI="#Sleeping"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasUserId"/>
         <Class IRI="#User"/>
     </DataPropertyDomain>
@@ -454,14 +475,6 @@
         <DataProperty IRI="#hasVariabilityHR"/>
         <Class IRI="#HeartRateVariability"/>
     </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#latitude"/>
-        <Class IRI="#Location"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#longitude"/>
-        <Class IRI="#Location"/>
-    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#hasCurrentHR"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
@@ -469,6 +482,14 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasDateTimeValue"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLatitude"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLongitude"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasName"/>
@@ -487,6 +508,10 @@
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasSleepingHours"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasUserId"/>
         <Datatype abbreviatedIRI="xsd:long"/>
     </DataPropertyRange>
@@ -497,14 +522,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasVariabilityHR"/>
         <Datatype abbreviatedIRI="xsd:double"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#latitude"/>
-        <Datatype abbreviatedIRI="xsd:long"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#longitude"/>
-        <Datatype abbreviatedIRI="xsd:long"/>
     </DataPropertyRange>
 </Ontology>
 
