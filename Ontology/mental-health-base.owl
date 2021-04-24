@@ -17,13 +17,7 @@
         <Literal>This base ontology describe the detection of mental health problemas by context awereness.</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#Action"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Activity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Anxiety"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Context"/>
@@ -66,9 +60,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Steps"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Stress"/>
     </Declaration>
     <Declaration>
         <Class IRI="#User"/>
@@ -120,6 +111,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasSeverity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasShift"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasSleepQualityPoints"/>
@@ -140,10 +134,22 @@
         <DataProperty IRI="#longitude"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#afternoon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dawn"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#driving"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#evening"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#in_car"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#morning"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#my_home"/>
@@ -155,6 +161,9 @@
         <NamedIndividual IRI="#my_work"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#night"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#still"/>
     </Declaration>
     <Declaration>
@@ -163,10 +172,6 @@
     <SubClassOf>
         <Class IRI="#Activity"/>
         <Class IRI="#DailyContext"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Anxiety"/>
-        <Class IRI="#MentalDisorder"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DailyContext"/>
@@ -212,10 +217,6 @@
         <Class IRI="#Steps"/>
         <Class IRI="#DailyContext"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Stress"/>
-        <Class IRI="#MentalDisorder"/>
-    </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Activity"/>
         <Class IRI="#DateTime"/>
@@ -230,10 +231,6 @@
         <Class IRI="#Steps"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Anxiety"/>
-        <Class IRI="#Stress"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#DailyContext"/>
         <Class IRI="#PhysiologicalContext"/>
     </DisjointClasses>
@@ -244,12 +241,28 @@
         <Class IRI="#Sleeping"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#DayShift"/>
+        <NamedIndividual IRI="#afternoon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DayShift"/>
+        <NamedIndividual IRI="#dawn"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Activity"/>
         <NamedIndividual IRI="#driving"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#DayShift"/>
+        <NamedIndividual IRI="#evening"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Activity"/>
         <NamedIndividual IRI="#in_car"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DayShift"/>
+        <NamedIndividual IRI="#morning"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Place"/>
@@ -262,6 +275,10 @@
     <ClassAssertion>
         <Class IRI="#Place"/>
         <NamedIndividual IRI="#my_work"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DayShift"/>
+        <NamedIndividual IRI="#night"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Activity"/>
@@ -454,6 +471,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasSeverity"/>
         <Class IRI="#MentalDisorder"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasShift"/>
+        <Class IRI="#DayShift"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasSleepQualityPoints"/>
@@ -502,6 +523,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasSeverity"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasShift"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasSleepQualityPoints"/>
