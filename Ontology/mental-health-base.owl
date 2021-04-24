@@ -35,6 +35,9 @@
         <Class IRI="#DateTime"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DayShift"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#HeartRate"/>
     </Declaration>
     <Declaration>
@@ -99,6 +102,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isReferencedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#altitude"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasCurrentHR"/>
@@ -171,6 +177,10 @@
         <Class IRI="#DailyContext"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#DayShift"/>
+        <Class IRI="#DailyContext"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#HeartRate"/>
         <Class IRI="#PhysiologicalContext"/>
     </SubClassOf>
@@ -185,6 +195,10 @@
     <SubClassOf>
         <Class IRI="#Oximetry"/>
         <Class IRI="#PhysiologicalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="#User"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhysiologicalContext"/>
@@ -203,12 +217,11 @@
         <Class IRI="#MentalDisorder"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#Action"/>
-        <Class IRI="#Context"/>
-        <Class IRI="#MentalDisorder"/>
-        <Class IRI="#Person"/>
-        <Class IRI="#Place"/>
-        <Class IRI="#User"/>
+        <Class IRI="#Activity"/>
+        <Class IRI="#DateTime"/>
+        <Class IRI="#DayShift"/>
+        <Class IRI="#Location"/>
+        <Class IRI="#Steps"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Activity"/>
@@ -360,11 +373,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isAffecting"/>
-        <Class IRI="#User"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isCollectingData"/>
-        <Class IRI="#User"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isCreatedBy"/>
@@ -384,7 +397,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDataCollected"/>
-        <Class IRI="#User"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDataFor"/>
@@ -392,7 +405,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEffects"/>
-        <Class IRI="#User"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMetadata"/>
@@ -418,6 +431,10 @@
         <ObjectProperty IRI="#isReferencedBy"/>
         <Class IRI="#Location"/>
     </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#altitude"/>
+        <Class IRI="#Location"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasCurrentHR"/>
         <Class IRI="#HeartRate"/>
@@ -462,6 +479,10 @@
         <DataProperty IRI="#longitude"/>
         <Class IRI="#Location"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#altitude"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasCurrentHR"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
