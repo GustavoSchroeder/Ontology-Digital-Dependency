@@ -95,7 +95,7 @@
         <ObjectProperty IRI="#isReferencedBy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#altitude"/>
+        <DataProperty IRI="#hasAltitude"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasCurrentHR"/>
@@ -135,12 +135,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasVariabilityHR"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#latitude"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#longitude"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#afternoon"/>
@@ -464,7 +458,7 @@
         <Class IRI="#Location"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
-        <DataProperty IRI="#altitude"/>
+        <DataProperty IRI="#hasAltitude"/>
         <Class IRI="#Location"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -520,7 +514,7 @@
         <Class IRI="#HeartRateVariability"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="#altitude"/>
+        <DataProperty IRI="#hasAltitude"/>
         <Datatype abbreviatedIRI="xsd:long"/>
     </DataPropertyRange>
     <DataPropertyRange>
