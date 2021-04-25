@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/3/digital-dependency.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/3/digital-dependency.owl">
+    <Prefix name="" IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/3/digital-dependency.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology describe the unhealthy use of electronic devices and their relationship to mental health problems and diseases, using context historic to identify this diseases.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Depression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeviceContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternetAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MentalDistress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotificationStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartphoneAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartphoneAppUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartphoneScreenStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialAnxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialMediaAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnologyAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VideoGameAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VideoGameStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WebBrowserHistory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddiction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDisturbing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAnxietyScale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAppInUse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDepressionScale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMentalDistressScale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNotificationStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasScreenInUse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSocialAnxietyStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStressScale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVideoStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWebBroserHistory"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Depression"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeviceContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternetAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalDistress"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotificationStatus"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneAppUse"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneScreenStatus"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialAnxiety"/>
+        <Class IRI="#Anxiety"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialMediaAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stress"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoGameAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoGameStatus"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WebBrowserHistory"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="#Depression"/>
+        <Class IRI="#MentalDistress"/>
+        <Class IRI="#Stress"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#InternetAddiction"/>
+        <Class IRI="#SmartphoneAddiction"/>
+        <Class IRI="#SocialMediaAddiction"/>
+        <Class IRI="#VideoGameAddiction"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SmartphoneAppUse"/>
+        <Class IRI="#SmartphoneScreenStatus"/>
+        <Class IRI="#VideoGameStatus"/>
+        <Class IRI="#WebBrowserHistory"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAddiction"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAddiction"/>
+        <ObjectProperty IRI="#isDisturbing"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDisturbing"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAddiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDisturbing"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAnxietyScale"/>
+        <Class IRI="#Anxiety"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAppInUse"/>
+        <Class IRI="#SmartphoneAppUse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDepressionScale"/>
+        <Class IRI="#Depression"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMentalDistressScale"/>
+        <Class IRI="#MentalDistress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNotificationStatus"/>
+        <Class IRI="#NotificationStatus"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasScreenInUse"/>
+        <Class IRI="#SmartphoneScreenStatus"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSocialAnxietyStatus"/>
+        <Class IRI="#SocialAnxiety"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStressScale"/>
+        <Class IRI="#Stress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVideoStatus"/>
+        <Class IRI="#VideoGameStatus"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebBroserHistory"/>
+        <Class IRI="#WebBrowserHistory"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAnxietyScale"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAppInUse"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDepressionScale"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMentalDistressScale"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNotificationStatus"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasScreenInUse"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSocialAnxietyStatus"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStressScale"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVideoStatus"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWebBroserHistory"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
