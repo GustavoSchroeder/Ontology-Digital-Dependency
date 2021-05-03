@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/ppgca_unisinos/expand-anxiety-stress"
+     xml:base="http://www.semanticweb.org/ppgca_unisinos/expand-anxiety-stress.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/ppgca_unisinos/expand-anxiety-stress">
+     ontologyIRI="http://www.semanticweb.org/ppgca_unisinos/expand-anxiety-stress.owl">
+    <Prefix name="" IRI="http://www.semanticweb.org/ppgca_unisinos/expand-anxiety-stress"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -13,8 +14,217 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl</Import>
     <Declaration>
+        <Class IRI="#Anger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anxious"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Behavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Behavioral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BeliefLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cognitive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emotions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intencity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LifeContext"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MentalStatus"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="#Psychologist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stressed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SupportTools"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thoughts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTreatment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSymptom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTreatedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpecialty"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Anger"/>
+        <Class IRI="#MentalStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxious"/>
+        <Class IRI="#MentalStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Behavior"/>
+        <Class IRI="#LifeContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Behavioral"/>
+        <Class IRI="#SupportTools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BeliefLevel"/>
+        <Class IRI="#Thoughts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cognitive"/>
+        <Class IRI="#SupportTools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emotions"/>
+        <Class IRI="#LifeContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intencity"/>
+        <Class IRI="#Emotions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LifeContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Psychologist"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relax"/>
+        <Class IRI="#MentalStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Situation"/>
+        <Class IRI="#LifeContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stress"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stressed"/>
+        <Class IRI="#MentalStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thoughts"/>
+        <Class IRI="#LifeContext"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#DailyContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#PhysiologicalContext"/>
+        <Class IRI="#LifeContext"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
+        <Class IRI="#Psychologist"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Anger"/>
+        <Class IRI="#Anxious"/>
+        <Class IRI="#Relax"/>
+        <Class IRI="#Stressed"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="#Stress"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Behavior"/>
+        <Class IRI="#Emotions"/>
+        <Class IRI="#Situation"/>
+        <Class IRI="#Thoughts"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Behavioral"/>
+        <Class IRI="#Cognitive"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTreatment"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTreatedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTreatment"/>
+        <ObjectProperty IRI="#isTreatedBy"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasTreatment"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isSymptom"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isTreatedBy"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTreatment"/>
+        <Class IRI="#Psychologist"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSymptom"/>
+        <Class IRI="#MentalStatus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTreatedBy"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTreatment"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTreatedBy"/>
+        <Class IRI="#Psychologist"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasName"/>
+        <Class IRI="#Psychologist"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSpecialty"/>
+        <Class IRI="#Psychologist"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSpecialty"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
 </Ontology>
 
 
