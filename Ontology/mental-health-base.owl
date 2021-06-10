@@ -221,23 +221,6 @@
         <Class IRI="#DailyContext"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#Activity"/>
-        <Class IRI="#DateTime"/>
-        <Class IRI="#DayShift"/>
-        <Class IRI="#Location"/>
-        <Class IRI="#Steps"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Activity"/>
-        <Class IRI="#DateTime"/>
-        <Class IRI="#Location"/>
-        <Class IRI="#Steps"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#DailyContext"/>
-        <Class IRI="#PhysiologicalContext"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#HeartRate"/>
         <Class IRI="#HeartRateVariability"/>
         <Class IRI="#Oximetry"/>
@@ -377,86 +360,6 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#isDependentOf"/>
     </TransitiveObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCreated"/>
-        <Class IRI="#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDataCollected"/>
-        <Class IRI="#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDataFor"/>
-        <Class IRI="#HeartRate"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasEffects"/>
-        <Class IRI="#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasMetadata"/>
-        <Class IRI="#Place"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isAffecting"/>
-        <Class IRI="#MentalDisorder"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isCollectingData"/>
-        <Class IRI="#Context"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isCreatedBy"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isDependentOf"/>
-        <Class IRI="#HeartRateVariability"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isReferencedBy"/>
-        <Class IRI="#Location"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCreated"/>
-        <Class IRI="#User"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDataCollected"/>
-        <Class IRI="#Context"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDataFor"/>
-        <Class IRI="#HeartRateVariability"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasEffects"/>
-        <Class IRI="#MentalDisorder"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasMetadata"/>
-        <Class IRI="#Location"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isAffecting"/>
-        <Class IRI="#Person"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isCollectingData"/>
-        <Class IRI="#Person"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isCreatedBy"/>
-        <Class IRI="#Person"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isDependentOf"/>
-        <Class IRI="#HeartRate"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isReferencedBy"/>
-        <Class IRI="#Place"/>
-    </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#hasAltitude"/>
         <Class IRI="#Location"/>
