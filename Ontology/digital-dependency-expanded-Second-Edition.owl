@@ -27,13 +27,25 @@
         <Class IRI="#DeviceContext"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DisorderSeverity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#InternetAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medium"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MentalDistress"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Mild"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#NotificationStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Severe"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SmartphoneAddiction"/>
@@ -58,6 +70,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#TechnologyIntoxication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ValuePartition"/>
     </Declaration>
     <Declaration>
         <Class IRI="#VideoGameAddiction"/>
@@ -88,6 +103,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSeverity"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isDisturbing"/>
@@ -146,6 +164,16 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isReferencedBy"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
         <ObjectUnionOf>
             <ObjectIntersectionOf>
@@ -163,6 +191,14 @@
                 <ObjectProperty IRI="#hasAddiction"/>
                 <Class IRI="#TechnologyAddiction"/>
             </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DisorderSeverity"/>
+        <ObjectUnionOf>
+            <Class IRI="#Medium"/>
+            <Class IRI="#Mild"/>
+            <Class IRI="#Severe"/>
         </ObjectUnionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -227,8 +263,11 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGeograficalRepresentation"/>
+            <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Anxiety"/>
@@ -241,6 +280,10 @@
     <SubClassOf>
         <Class IRI="#DeviceContext"/>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisorderSeverity"/>
+        <Class IRI="#ValuePartition"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#InternetAddiction"/>
@@ -258,12 +301,24 @@
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Medium"/>
+        <Class IRI="#DisorderSeverity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MentalDistress"/>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Mild"/>
+        <Class IRI="#DisorderSeverity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#NotificationStatus"/>
         <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Severe"/>
+        <Class IRI="#DisorderSeverity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SmartphoneAddiction"/>
@@ -344,6 +399,11 @@
         <Class IRI="#DeviceContext"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Medium"/>
+        <Class IRI="#Mild"/>
+        <Class IRI="#Severe"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#NotificationStatus"/>
         <Class IRI="#SmartphoneAppUse"/>
         <Class IRI="#SmartphoneScreenStatus"/>
@@ -375,6 +435,10 @@
         <ObjectProperty IRI="#hasNegativeRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSeverity"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isGeograficallyRepresented"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -382,6 +446,9 @@
         <ObjectProperty IRI="#hasAddiction"/>
         <ObjectProperty IRI="#isDisturbing"/>
     </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSeverity"/>
+    </FunctionalObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#hasAddiction"/>
     </TransitiveObjectProperty>
@@ -551,6 +618,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
         <Class IRI="#SocialAnxiety"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSeverity"/>
+        <Class IRI="#ValuePartition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isDisturbing"/>
