@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/ppgca_unisinos/expand-anxiety-stress.owl">
-    <Prefix name="" IRI="http://www.semanticweb.org/ppgca_unisinos/expand-anxiety-stress"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/ppgca_unisinos/expand-anxiety-stress.owl"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -32,25 +32,64 @@
         <Class IRI="#BeliefLevel"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Catastrophizing"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Cognitive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CognitiveDistortions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmotionalReasoning"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Emotions"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Generalization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HastyConclusions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Imperatives"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Intencity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Labeling"/>
     </Declaration>
     <Declaration>
         <Class IRI="#LifeContext"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#MentalFilter"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MentalStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MindReading"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MinimizationMaximization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personalization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polarization"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Psychologist"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Relax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SelectiveAbstraction"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Situation"/>
@@ -104,20 +143,64 @@
         <Class IRI="#Thoughts"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Catastrophizing"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Cognitive"/>
         <Class IRI="#SupportTools"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#EmotionalReasoning"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Emotions"/>
         <Class IRI="#LifeContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Generalization"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HastyConclusions"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Imperatives"/>
+        <Class IRI="#CognitiveDistortions"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Intencity"/>
         <Class IRI="#Emotions"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Labeling"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#LifeContext"/>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalFilter"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MindReading"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinimizationMaximization"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Personalization"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Polarization"/>
+        <Class IRI="#CognitiveDistortions"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Psychologist"/>
@@ -126,6 +209,10 @@
     <SubClassOf>
         <Class IRI="#Relax"/>
         <Class IRI="#MentalStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SelectiveAbstraction"/>
+        <Class IRI="#CognitiveDistortions"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Situation"/>
@@ -157,10 +244,6 @@
         <Class IRI="#Anxious"/>
         <Class IRI="#Relax"/>
         <Class IRI="#Stressed"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Anxiety"/>
-        <Class IRI="#Stress"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Behavior"/>
