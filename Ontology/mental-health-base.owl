@@ -116,9 +116,6 @@
         <DataProperty IRI="#hasQuantitySteps"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasSeverity"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasShift"/>
     </Declaration>
     <Declaration>
@@ -389,10 +386,6 @@
         <Class IRI="#Steps"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasSeverity"/>
-        <Class IRI="#MentalDisorder"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasShift"/>
         <Class IRI="#DayShift"/>
     </DataPropertyDomain>
@@ -442,10 +435,6 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasQuantitySteps"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasSeverity"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
