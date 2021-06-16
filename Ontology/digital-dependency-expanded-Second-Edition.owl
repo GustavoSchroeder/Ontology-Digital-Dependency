@@ -1,0 +1,970 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/3/digital-dependency.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/3/digital-dependency.owl">
+    <Prefix name="" IRI="http://www.semanticweb.org/gustavolazarottoschroeder/ontologies/2021/3/digital-dependency.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology describe the unhealthy use of electronic devices and their relationship to mental health problems and diseases, using context historic to identify this diseases.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Depression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeviceContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisorderSeverity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternetAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MentalDistress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mild"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotificationStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Severe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartphoneAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartphoneAppUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmartphoneScreenStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialAnxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialMediaAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnologyAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnologyIntoxication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ValuePartition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VideoGameAddiction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VideoGameStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WebBrowserHistory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddiction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGeograficalRepresentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNegativeRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNegativeRelationInternetAddiction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNegativeRelationSmartphoneAddiction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNegativeRelationSocialMediaAddiction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSeverity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDisturbing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isGeograficallyRepresented"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAnxietyScale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAppInUse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDepressionScale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMentalDisorderSeverity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMentalDistressScale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNotificationStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasScreenInUse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSocialAnxietyStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStressScale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTechnologyDisorderSeverity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVideoStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWebBroserHistory"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isCollectingData"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isCollectingData"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isAffecting"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isAffecting"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isReferencedBy"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="owl:Thing"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDataCollected"/>
+                    <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasAddiction"/>
+                    <Class IRI="#TechnologyAddiction"/>
+                </ObjectSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasName"/>
+                    <Datatype abbreviatedIRI="xsd:string"/>
+                </DataSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasUserId"/>
+                    <Datatype abbreviatedIRI="xsd:long"/>
+                </DataSomeValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasEffects"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DisorderSeverity"/>
+        <ObjectUnionOf>
+            <Class IRI="#Medium"/>
+            <Class IRI="#Mild"/>
+            <Class IRI="#Severe"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TechnologyAddiction"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasNegativeRelation"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#isDisturbing"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasNegativeRelation"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TechnologyIntoxication"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isAffecting"/>
+                    <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#isDisturbing"/>
+                    <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#hasNegativeRelationInternetAddiction"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Anxiety"/>
+                        <Class IRI="#Depression"/>
+                        <Class IRI="#Stress"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#hasNegativeRelationSmartphoneAddiction"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Depression"/>
+                        <Class IRI="#Stress"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#hasNegativeRelationSocialMediaAddiction"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Anxiety"/>
+                        <Class IRI="#Depression"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Depression"/>
+                        <Class IRI="#SocialAnxiety"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#DateTime"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDateTimeValue"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#DayShift"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasShift"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#HeartRate"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasCurrentHR"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#HeartRateVariability"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasVariabilityHR"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGeograficalRepresentation"/>
+            <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasAltitude"/>
+            <Datatype abbreviatedIRI="xsd:long"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasLongitude"/>
+            <Datatype abbreviatedIRI="xsd:long"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Oximetry"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasValueOximetry"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Sleeping"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasSleepQualityPoints"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Sleeping"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasSleepingHours"/>
+            <Datatype abbreviatedIRI="xsd:long"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Steps"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasQuantitySteps"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasAnxietyScale"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasMentalDisorderSeverity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Depression"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Depression"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDepressionScale"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Depression"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasMentalDisorderSeverity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeviceContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisorderSeverity"/>
+        <Class IRI="#ValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternetAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternetAddiction"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasNegativeRelationInternetAddiction"/>
+            <ObjectUnionOf>
+                <Class IRI="#Anxiety"/>
+                <Class IRI="#Depression"/>
+                <Class IRI="#Stress"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternetAddiction"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTechnologyDisorderSeverity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medium"/>
+        <Class IRI="#DisorderSeverity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalDistress"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalDistress"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasMentalDisorderSeverity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalDistress"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasMentalDistressScale"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mild"/>
+        <Class IRI="#DisorderSeverity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotificationStatus"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotificationStatus"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasNotificationStatus"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Severe"/>
+        <Class IRI="#DisorderSeverity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneAddiction"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasNegativeRelationSmartphoneAddiction"/>
+            <ObjectUnionOf>
+                <Class IRI="#Depression"/>
+                <Class IRI="#Stress"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneAddiction"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTechnologyDisorderSeverity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneAppUse"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneAppUse"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasAppInUse"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneScreenStatus"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmartphoneScreenStatus"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasScreenInUse"/>
+            <Datatype abbreviatedIRI="xsd:long"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialAnxiety"/>
+        <Class IRI="#Anxiety"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialAnxiety"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSocialAnxietyStatus"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialMediaAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialMediaAddiction"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasNegativeRelationSocialMediaAddiction"/>
+            <ObjectUnionOf>
+                <Class IRI="#Anxiety"/>
+                <Class IRI="#Depression"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialMediaAddiction"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTechnologyDisorderSeverity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stress"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stress"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasMentalDisorderSeverity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stress"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasStressScale"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoGameAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoGameAddiction"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
+            <ObjectUnionOf>
+                <Class IRI="#Depression"/>
+                <Class IRI="#SocialAnxiety"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoGameAddiction"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTechnologyDisorderSeverity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoGameStatus"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoGameStatus"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVideoStatus"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WebBrowserHistory"/>
+        <Class IRI="#DeviceContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WebBrowserHistory"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasWebBroserHistory"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Activity"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#DateTime"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#DayShift"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Steps"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#DailyContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#PhysiologicalContext"/>
+        <Class IRI="#DeviceContext"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Medium"/>
+        <Class IRI="#Mild"/>
+        <Class IRI="#Severe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NotificationStatus"/>
+        <Class IRI="#SmartphoneAppUse"/>
+        <Class IRI="#SmartphoneScreenStatus"/>
+        <Class IRI="#VideoGameStatus"/>
+        <Class IRI="#WebBrowserHistory"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAddiction"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasGeograficalRepresentation"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNegativeRelationInternetAddiction"/>
+        <ObjectProperty IRI="#hasNegativeRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNegativeRelationSmartphoneAddiction"/>
+        <ObjectProperty IRI="#hasNegativeRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNegativeRelationSocialMediaAddiction"/>
+        <ObjectProperty IRI="#hasNegativeRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
+        <ObjectProperty IRI="#hasNegativeRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSeverity"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isGeograficallyRepresented"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAddiction"/>
+        <ObjectProperty IRI="#isDisturbing"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSeverity"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasAddiction"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasGeograficalRepresentation"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasCreated"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDataCollected"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDataFor"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#HeartRate"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasEffects"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasMetadata"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isAffecting"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isCollectingData"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isCreatedBy"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isDependentOf"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#HeartRateVariability"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isReferencedBy"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAddiction"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGeograficalRepresentation"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNegativeRelation"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNegativeRelationInternetAddiction"/>
+        <Class IRI="#InternetAddiction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNegativeRelationSmartphoneAddiction"/>
+        <Class IRI="#SmartphoneAddiction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNegativeRelationSocialMediaAddiction"/>
+        <Class IRI="#SocialMediaAddiction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
+        <Class IRI="#VideoGameAddiction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDisturbing"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isGeograficallyRepresented"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasCreated"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDataCollected"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDataFor"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#HeartRateVariability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasEffects"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasMetadata"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isAffecting"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isCollectingData"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isCreatedBy"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isDependentOf"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#HeartRate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#isReferencedBy"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAddiction"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGeograficalRepresentation"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelation"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationInternetAddiction"/>
+        <Class IRI="#Anxiety"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationInternetAddiction"/>
+        <Class IRI="#Depression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationInternetAddiction"/>
+        <Class IRI="#Stress"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationSmartphoneAddiction"/>
+        <Class IRI="#Depression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationSmartphoneAddiction"/>
+        <Class IRI="#Stress"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationSocialMediaAddiction"/>
+        <Class IRI="#Anxiety"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationSocialMediaAddiction"/>
+        <Class IRI="#Depression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
+        <Class IRI="#Depression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNegativeRelationVideoGameAddiction"/>
+        <Class IRI="#SocialAnxiety"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSeverity"/>
+        <Class IRI="#ValuePartition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDisturbing"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isGeograficallyRepresented"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Place"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasTechnologyDisorderSeverity"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAnxietyScale"/>
+        <Class IRI="#Anxiety"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAppInUse"/>
+        <Class IRI="#SmartphoneAppUse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDepressionScale"/>
+        <Class IRI="#Depression"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMentalDisorderSeverity"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMentalDistressScale"/>
+        <Class IRI="#MentalDistress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNotificationStatus"/>
+        <Class IRI="#NotificationStatus"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasScreenInUse"/>
+        <Class IRI="#SmartphoneScreenStatus"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSocialAnxietyStatus"/>
+        <Class IRI="#SocialAnxiety"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStressScale"/>
+        <Class IRI="#Stress"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTechnologyDisorderSeverity"/>
+        <Class IRI="#TechnologyAddiction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVideoStatus"/>
+        <Class IRI="#VideoGameStatus"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebBroserHistory"/>
+        <Class IRI="#WebBrowserHistory"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAnxietyScale"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAppInUse"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDepressionScale"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMentalDisorderSeverity"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMentalDistressScale"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNotificationStatus"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasScreenInUse"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSocialAnxietyStatus"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStressScale"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTechnologyDisorderSeverity"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVideoStatus"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWebBroserHistory"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User</IRI>
+        <Literal xml:lang="pt">Esta classe define todos os usuários da aplicação, que podem ser pessoas
+
+A descrição foi convertida em uma definição. Se alguma coisa é User, tem pelo menos um de seus dados coletados seja membro da classe Contexto, assim como um dos efeitos seja dado pela classe Mental Disorder e pelo menos um dos vicíos seja membro da classe Technology Addiction.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
