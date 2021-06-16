@@ -23,6 +23,9 @@
         <Class IRI="#Anxious"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#BeckAnxietyInventory"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Behavior"/>
     </Declaration>
     <Declaration>
@@ -47,7 +50,13 @@
         <Class IRI="#Emotions"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#GeneralAnxietyDisorder7"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Generalization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HamiltonAnxietyScale"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HastyConclusions"/>
@@ -77,6 +86,9 @@
         <Class IRI="#MinimizationMaximization"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PatientHealthQuestionnaire"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Personalization"/>
     </Declaration>
     <Declaration>
@@ -87,6 +99,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Relax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScreeningForms"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SelectiveAbstraction"/>
@@ -107,6 +122,9 @@
         <Class IRI="#Thoughts"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDistortions"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasTreatment"/>
     </Declaration>
     <Declaration>
@@ -116,8 +134,15 @@
         <ObjectProperty IRI="#isTreatedBy"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasScore"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasSpecialty"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Anger"/>
         <Class IRI="#MentalStatus"/>
@@ -129,6 +154,10 @@
     <SubClassOf>
         <Class IRI="#Anxious"/>
         <Class IRI="#MentalStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BeckAnxietyInventory"/>
+        <Class IRI="#ScreeningForms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Behavior"/>
@@ -159,8 +188,16 @@
         <Class IRI="#LifeContext"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#GeneralAnxietyDisorder7"/>
+        <Class IRI="#ScreeningForms"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Generalization"/>
         <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HamiltonAnxietyScale"/>
+        <Class IRI="#ScreeningForms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#HastyConclusions"/>
@@ -193,6 +230,10 @@
     <SubClassOf>
         <Class IRI="#MinimizationMaximization"/>
         <Class IRI="#CognitiveDistortions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PatientHealthQuestionnaire"/>
+        <Class IRI="#ScreeningForms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Personalization"/>
@@ -240,12 +281,6 @@
         <Class IRI="#Psychologist"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Anger"/>
-        <Class IRI="#Anxious"/>
-        <Class IRI="#Relax"/>
-        <Class IRI="#Stressed"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Behavior"/>
         <Class IRI="#Emotions"/>
         <Class IRI="#Situation"/>
@@ -277,6 +312,10 @@
         <ObjectProperty IRI="#isTreatedBy"/>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDistortions"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTreatment"/>
         <Class IRI="#Psychologist"/>
     </ObjectPropertyDomain>
@@ -289,6 +328,10 @@
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDistortions"/>
+        <Class IRI="#CognitiveDistortions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTreatment"/>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
     </ObjectPropertyRange>
@@ -299,6 +342,22 @@
     <DataPropertyDomain>
         <DataProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasName"/>
         <Class IRI="#Psychologist"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasScore"/>
+        <Class IRI="#BeckAnxietyInventory"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasScore"/>
+        <Class IRI="#GeneralAnxietyDisorder7"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasScore"/>
+        <Class IRI="#HamiltonAnxietyScale"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasScore"/>
+        <Class IRI="#PatientHealthQuestionnaire"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasSpecialty"/>
