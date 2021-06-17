@@ -59,7 +59,7 @@
         <Class IRI="#Imperatives"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Intencity"/>
+        <Class IRI="#Intensity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Labeling"/>
@@ -95,6 +95,9 @@
         <Class IRI="#Polarization"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Professional"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Psychologist"/>
     </Declaration>
     <Declaration>
@@ -113,6 +116,12 @@
         <Class IRI="#SupportTools"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TherapistBe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TherapistCBT"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Thoughts"/>
     </Declaration>
     <Declaration>
@@ -126,6 +135,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasTreatment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUsedTechnique"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isSymptom"/>
@@ -160,6 +172,13 @@
     <Declaration>
         <NamedIndividual IRI="#Stressed"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDataCollected"/>
+            <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#GeneralAnxietyDisorder7"/>
         <ObjectIntersectionOf>
@@ -200,10 +219,54 @@
             <NamedIndividual IRI="#Stressed"/>
         </ObjectHasValue>
     </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
-        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
-    </SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="#Psychologist"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasTreatment"/>
+                <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TherapistBe"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Professional"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasTreatment"/>
+                    <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+                </ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#hasUsedTechnique"/>
+                    <Class IRI="#Behavior"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TherapistCBT"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Professional"/>
+            <ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasUsedTechnique"/>
+                        <Class IRI="#Behavior"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasUsedTechnique"/>
+                        <Class IRI="#Cognitive"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasTreatment"/>
+                    <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#MentalDisorder"/>
         <Class abbreviatedIRI="owl:Thing"/>
@@ -295,7 +358,7 @@
         <Class IRI="#CognitiveDistortions"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Intencity"/>
+        <Class IRI="#Intensity"/>
         <Class IRI="#Emotions"/>
     </SubClassOf>
     <SubClassOf>
@@ -339,17 +402,6 @@
         <Class IRI="#CognitiveDistortions"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Psychologist"/>
-        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Psychologist"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasTreatment"/>
-            <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#PersonWithAnxietyDisorder"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#SelectiveAbstraction"/>
         <Class IRI="#CognitiveDistortions"/>
     </SubClassOf>
@@ -372,6 +424,10 @@
                 <NamedIndividual IRI="#Stressed"/>
             </ObjectHasValue>
         </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TherapistBe"/>
+        <Class IRI="#Professional"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Thoughts"/>
@@ -528,12 +584,24 @@
         <ObjectProperty IRI="#isTreatedBy"/>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDataCollected"/>
+        <Class IRI="#PersonWithGADResult"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#hasDataCollected"/>
+        <Class IRI="#PersonWithStress"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDistortions"/>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#PersonWithAnxietyDisorder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTreatment"/>
         <Class IRI="#Psychologist"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUsedTechnique"/>
+        <Class IRI="#TherapistCBT"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isSymptom"/>
@@ -550,6 +618,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTreatment"/>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#PersonWithAnxietyDisorder"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUsedTechnique"/>
+        <Class IRI="#SupportTools"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isTreatedBy"/>
