@@ -45,6 +45,9 @@
         <Class IRI="#NotificationStatus"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PhysiologicalContext"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Severe"/>
     </Declaration>
     <Declaration>
@@ -148,6 +151,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasWebBroserHistory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Person"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#Context"/>
@@ -469,6 +475,10 @@
             <DataProperty IRI="#hasNotificationStatus"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysiologicalContext"/>
+        <Class IRI="http://www.semanticweb.org/gustavo_schroeder/ontologies/2021/3/mental-health-base.owl#PhysiologicalContext"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Severe"/>
